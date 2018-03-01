@@ -31,6 +31,8 @@
             this.dtProduto = new System.Windows.Forms.DataGridView();
             this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTotalRegistros = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtProduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,17 +67,37 @@
             this.Valores.ReadOnly = true;
             this.Valores.Width = 250;
             // 
+            // lblTotalRegistros
+            // 
+            this.lblTotalRegistros.AutoSize = true;
+            this.lblTotalRegistros.Location = new System.Drawing.Point(12, 542);
+            this.lblTotalRegistros.Name = "lblTotalRegistros";
+            this.lblTotalRegistros.Size = new System.Drawing.Size(193, 25);
+            this.lblTotalRegistros.TabIndex = 1;
+            this.lblTotalRegistros.Text = "Total de Registros:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(157, 542);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 25);
+            this.label2.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 656);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTotalRegistros);
             this.Controls.Add(this.dtProduto);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtProduto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,6 +106,8 @@
         private System.Windows.Forms.DataGridView dtProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valores;
+        private System.Windows.Forms.Label lblTotalRegistros;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Conexao_database
@@ -21,8 +22,11 @@ namespace Conexao_database
             //instancia a classe DAL e chama o método
             //o resultado do método é o datasource do grid
             ProdutoDAL produtoDAL = new ProdutoDAL();
-            dtProduto.DataSource = produtoDAL.BuscaTodosProdutos().Tables[0];
-            
+            DataTable dtTable = produtoDAL.BuscaTodosProdutos().Tables[0];
+
+            dtProduto.DataSource = dtTable;
+            lblTotalRegistros.Text = "Total de registros: "+ dtTable.Rows.Count.ToString();
+
         }
     }
 }
